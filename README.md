@@ -1,5 +1,5 @@
 # Pixel-Font-Generator
-This is a Pixel Font Generator for \mathbf{ike} and quilldren to celebrate ike hitting 500k on youtube and 600k on twitter.
+This is a Pixel Font Generator for **ike** and **quilldren** to celebrate ike hitting 500k on youtube and 600k on twitter.
 
 # Introduction
 1.The size of left part can display three rows with 8 character in each row.<br>
