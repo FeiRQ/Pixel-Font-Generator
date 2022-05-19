@@ -1,0 +1,143 @@
+body{
+		      color: #333;
+		      font-weight: 600;
+		      font-size: 16px;
+		      font-family: "Georgia";
+		      text-align: center;
+		    }
+		    header{
+				margin:10px 0px;
+		    	line-height: 50px;
+		    }
+		    footer{
+		      line-height: 40px;
+		    }
+		    /* 父元素设置flex，然后布局方向为主轴从上到下，那么header和footer就会在最上边和最下边 */
+		    html,body{
+		      height: 100%;
+		      margin: 0;
+		      /* 不设置100%，高度撑不开 */
+		    }
+		    .container{
+		      display: flex;
+		      display: -webkit-box;
+		      display: -webkit-flex;
+		      flex-direction: column;
+		      -ms-flex-direction: column;
+		    }
+		    article{
+		      flex: 1;
+		    }
+		    .title{
+				text-align: center;
+				margin:10px 0px;
+			}
+			#main{
+				width:1166px;
+				height:540px;
+				/*border:5px solid #348EC7;*/
+				border:5px;
+				margin:10px auto;
+				background-color: white;
+			}
+			#main .left{
+				width:960px;
+				height:100%;
+				border:3px solid #348EC7;
+				float:left;
+				position:relative;
+			}
+			#main .right{
+				width:200px;
+				height:100%;
+				/*border-left:5px solid #348EC7;*/
+				border-left:5px;
+				float:left;
+				box-sizing:border-box;
+				text-align: center;
+			}
+			#main .right h2{
+				margin:10px auto;
+				text-align: center;
+			}
+			#main .right button{
+				width:100px;
+				height:30px;
+				background-color: #abcdef;
+				border:0px;
+				border-radius: 5px;
+				color:#fff;
+				font-size: 20px;
+				outline: 0px;
+				margin-top:30px;
+			}
+			.food{
+				/*background-color: red;*/
+			}
+			.eleimg{
+				/*background-color: green;*/
+			}
+			/*switch button*/
+			.SwitchIcon {
+            margin: 30px auto;
+	        }
+	        #toggle-button {
+	            display: none;
+	        }
+	        .button-label {
+	            position: relative;
+	            display: inline-block;
+	            width: 45px;
+	            height: 20px;
+	            background-color: #ccc;
+	            box-shadow: #ccc 0px 0px 0px 2px;
+	            border-radius: 30px;
+	            overflow: hidden;
+	        }
+	        .circle {
+	            position: absolute;
+	            top: 3px;
+	            left: 0;
+	            width: 15px;
+	            height: 15px;
+	            border-radius: 60%;
+	            background-color: #fff;
+	        }
+	        .button-label .text {
+	            line-height: 15px;
+	            font-size: 9px;
+	            text-shadow: 0 0 2px #ddd;
+	        }
+	        .on {
+	            color: #fff;
+	            display: none;
+	            text-indent: -20px;
+	        }
+	        .off {
+	            color: #fff;
+	            display: inline-block;
+	            text-indent: 16px;
+	        }
+	        .button-label .circle {
+	            left: 2px;
+	            transition: all 0.3s;
+	        }
+	        #toggle-button:checked + label.button-label .circle {
+	            left: 29px;
+	        }
+	        #toggle-button:checked + label.button-label .on {
+	            display: inline-block;
+	        }
+	        #toggle-button:checked + label.button-label .off {
+	            display: none;
+	        }
+	        #toggle-button:checked + label.button-label {
+	            background-color: #abcdef;
+	        }
+
+	        /*upload an image*/
+            input.file{
+                position: relative;
+                opacity: 0;
+                cursor: pointer;
+            }
