@@ -10,54 +10,49 @@
 			
 		</style>
 	</head>
-	<!-- <body  class="container" > -->
 	<body class="container">
-    	<!-- <header style="background-image: url(b1_4x.jpg);background-size:30% 300%;"> -->
-    	<!-- <header style="background-color: #348EC7;"> -->
     	<header>
     		<span style="font-size:24pt; color: #348EC7;"> &ensp;&ensp;Pixel Font Generator for ike and quilldren&ensp;&ensp; </span>
     	</header>
     	<article >
-    	<!-- <article style="background-image: url(b2.jpg); background-size:300px 210px;"> -->
-			<div id="main" >
-				<!-- screen part -->
-				<div class="left" id="screen">
-					<div style="margin:auto 10px auto 650px;" id="intro">
-						<p style="margin:20px auto auto auto;">Introduction:</p>
-						<p style="margin:auto auto auto 20px ;text-align:left;"><br><span style="color: red;">1.</span>The size of left part can display three rows with 8 character in each row.</p>
-						<p style="margin:auto auto auto 20px ;text-align:left;"><br>2.Click upload button and choose a meta image.</p>
-						<p style="margin:auto auto auto 20px ;text-align:left;"><br>3.Put the content you would like to generate into the text area and click the generate button.</p>
-						<p style="margin:auto auto auto 20px ;text-align:left;"><br>4. Rotate switch can rotate part of the images with 90 degree in anticlockwise.</p>
-					</div>
-				</div>
-				<!-- menu part -->
-				<div class="right">
-					<!-- upload an image -->
-			        <input type="file" id="file" accept="image/gif,image/jpeg,image/jpg,image/png" style="display: none;" />
-			        <button id="btn-upload" onclick="uploadimg()" style="margin: 10px 30px;">upload</button>
-				 	<img src="" style="width: 60px;height: 60px;border: 1px solid blue; vertical-align: bottom; margin-top: 10px; line-height: 60px;l 60px;" alt="no meta image" />
-
-				 	<!-- rotate some meta -->
-					<div class="SwitchIcon">
-				        <div class="toggle-button-wrapper">
-				        	rotate:&ensp;
-				            <input type="checkbox" id="toggle-button" name="switch" οnclick="SwitchClick()" checked>
-				            <label for="toggle-button" class="button-label">
-				                <span class="circle"></span>
-				                <span class="text on">ON</span>
-				                <span class="text off">OFF</span>
-				            </label>
-				        </div>
-				    </div>
-
-				    <!-- input text -->
-					<input type="text" value="input" id="textid"/>
-					<button id="btn">generate</button>
-
+		<div id="main" >
+			<!-- screen part -->
+			<div class="left" id="screen">
+				<div style="margin:auto 10px auto 650px;" id="intro">
+					<p style="margin:20px auto auto auto;">Introduction:</p>
+					<p style="margin:auto auto auto 20px ;text-align:left;"><br><span style="color: red;">1.</span>The size of left part can display three rows with 8 character in each row.</p>
+					<p style="margin:auto auto auto 20px ;text-align:left;"><br>2.Click upload button and choose a meta image.</p>
+					<p style="margin:auto auto auto 20px ;text-align:left;"><br>3.Put the content you would like to generate into the text area and click the generate button.</p>
+					<p style="margin:auto auto auto 20px ;text-align:left;"><br>4. Rotate switch can rotate part of the images with 90 degree in anticlockwise.</p>
 				</div>
 			</div>
-		</article>
-    	<!-- <footer style="background-image: url(b1_4x.jpg);background-size:30% 400%; text-align: right;">coded by 斐Fei&ensp;&ensp;</footer> -->
+			<!-- menu part -->
+			<div class="right">
+				<!-- upload an image -->
+			<input type="file" id="file" accept="image/gif,image/jpeg,image/jpg,image/png" style="display: none;" />
+			<button id="btn-upload" onclick="uploadimg()" style="margin: 10px 30px;">upload</button>
+				<img src="" style="width: 60px;height: 60px;border: 1px solid blue; vertical-align: bottom; margin-top: 10px; line-height: 60px;l 60px;" alt="no meta image" />
+
+				<!-- rotate some meta -->
+				<div class="SwitchIcon">
+				<div class="toggle-button-wrapper">
+					rotate:&ensp;
+				    <input type="checkbox" id="toggle-button" name="switch" οnclick="SwitchClick()" checked>
+				    <label for="toggle-button" class="button-label">
+					<span class="circle"></span>
+					<span class="text on">ON</span>
+					<span class="text off">OFF</span>
+				    </label>
+				</div>
+			    </div>
+
+			    <!-- input text -->
+				<input type="text" value="input" id="textid"/>
+				<button id="btn">generate</button>
+
+			</div>
+		</div>
+	</article>
     	<footer style="text-align: right;">coded by 斐Fei&ensp;&ensp;</footer>
 	</body>
 	<script>
@@ -149,13 +144,12 @@
 			for(var j=0; j<n.length; j++){
 				for(var i=0;i<this.eleimgBody.length;i++){
 					if(this.eleimgBody[i][2]==n[j]||this.eleimgBody[i][3]==n[j]){
-						// 创建蛇身
+						// 创建
 						var eleimgBox=document.createElement("img");
-						// eleimgBox.src="ike.gif";
-						// eleimgBox.src="drink12.png";
 						eleimgBox.src=imgsrc;
 						if(imgsrc=="1"){
 							eleimgBox.src="ike.gif";
+							// eleimgBox.src="drink12.png";
 						}
 						if(this.onoffswitch.checked&&this.eleimgBody[i][4]==1){
 							eleimgBox.style.webkitTransform="rotate(-90deg)";
@@ -205,7 +199,7 @@
 		function clearBox(className){
 			// 获取类名为
 			var eleimgs=document.getElementsByClassName(className);
-			// 移除蛇身
+			// 移除
 			while(eleimgs.length){
 				eleimgs[0].parentNode.removeChild(eleimgs[0]);
 			}
